@@ -1,0 +1,12 @@
+{
+  "name": "MYRAA",
+  "description": "A real-time, voice-to-voice holographic companion named Myraa, using the Gemini Live API for low-latency audio stream processing and visual holographic projections.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "display-capture"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

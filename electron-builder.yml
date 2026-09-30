@@ -1,0 +1,41 @@
+appId: com.myraa.desktop
+productName: Myraa
+copyright: "Copyright © 2026 Myraa AI"
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**/*
+  - dist-electron/**/*
+  - electron/**/*
+  - assets/**/*
+  - build/**/*
+  - package.json
+  - server.ts
+  - server_*.ts
+  - local-agent.js
+  - src/**/*
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: build/icon.ico
+  requestedExecutionLevel: asInvoker
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: "Myraa AI Assistant"
+  uninstallDisplayName: "Myraa AI Assistant"
+  artifactName: "Myraa Setup.${ext}"
+  runAfterFinish: true
